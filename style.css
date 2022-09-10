@@ -2,42 +2,174 @@
     width: 100px;
     height: 100px;
     border: 1px solid red;
+    transition: background-color 2s;
 }
+
+/* risposta ex-1 */
+.ex-1-square:hover{
+    background-color: red;
+}
+/* ------------- */
+
 .ex-2-square {
     width: 100px;
     height: 100px;
     background: red;
+    transition: width 5s;
 }
+
+/* risposta ex-2 */
+.ex-2-square:hover{
+    width: 100%;
+}
+/* ------------- */
+
 .ex-3-square {
     width: 100px;
     height: 100px;
     background: red;
+    transition: border-radius 3s;
 }
+
+/* risposta ex-3 */
+.ex-3-square:hover{
+    border-radius: 50%;
+}
+/* ------------- */
+
 .ex-4-square {
     width: 100px;
     height: 100px;
     background: red;
+    transition: background-color 2s;
 }
+
+/* risposta ex-4 */
+.ex-4-square:hover{
+    background-color: rgba(255, 255, 255, 0);
+}
+/* ------------- */
+
 .ex-5-square {
     margin: 20px;
     width: 60px;
     height: 60px;
     background: red;
+    transition: 1s;
 }
+
+/* risposta ex-5 */
+.ex-5-square:hover{
+    width: 80px;
+    height: 80px;
+    margin: 10px;
+}
+
+.ex-5-square:active  {
+    width: 70px;
+    height: 70px;
+    margin: 15px;
+}
+
+/* ------------- */
+
 .ex-6-img, .ex-7-img, .ex-8-img {
     width: 500px;
 }
 
+.ex-7-img, .ex-8-img{
+    transition:  1s;
+}
+
+
+/* risposta ex-6 */
+.ex-6-img:hover{
+    filter: grayscale(10);
+    transition: contrast 2s ;
+}
+/* ------------- */
+
+/* risposta ex-7 */
+.ex-7-img:hover{
+    filter: brightness(0.5);
+    filter: contrast(10);
+}
+/* ------------- */
+
+/* risposta ex-8 */
+.ex-8-img:hover{
+    filter: saturate(3) contrast(5);
+    border-radius: 20px;
+}
+/* ------------- */
+
 .ex-9-img {
     margin: 50px 100px;
     width: 400px;
+    transition: 3s;
 }
+
+/* risposta ex-9 */
+.ex-9-img:hover{
+    filter: brightness(2) contrast(1.5) ;
+    border-radius: 40px 350px;
+    margin: 30px 80px;
+    width: 500px;
+
+}
+/* ------------- */
+
 .ex-10-icon {
     font-size: 60px;
+    animation-name: pippo ;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    transition: color 0.00001s;
 }
+
+/* risposta ex-10 */
+
+    @keyframes pippo {
+        0%   {transform: rotate(36deg); color: #ff0000;}
+        10%  {transform: rotate(72deg); color: #ff5300;}
+        20%  {transform: rotate(108deg); color: #ffa500;}
+        30%  {transform: rotate(144deg); color: #ffd200;}
+        40%  {transform: rotate(180deg); color: #ffff00;}
+        50%  {transform: rotate(216deg); color: #80c000;}
+        60%  {transform: rotate(252deg); color: #008000;}
+        70%  {transform: rotate(288deg); color: #004080;}
+        80%  {transform: rotate(324deg); color: #0000ff;}
+        90%  {transform: rotate(360deg); color: #2600c1;}
+        100% {transform: rotate(396deg); color: #4b0082;}
+}
+
+.ex-10-icon:hover{
+    cursor: progress;
+}
+
+/* ------------- */
+
+
 .ex-11-icon {
     font-size: 60px;
 }
+
+.ex-11-icon:hover{
+    animation-name: saro ;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes saro {
+    0%   {transform: rotate(0deg); color: #ffd200;}
+    90%  {transform: rotate(270deg); color: #ff0000;}
+    100% {transform: rotate(0deg); color: #ffd200;}
+}
+ 
+/* ------------- */
+
 .ex-12-button, .ex-13-button {
     position: relative;
     display: block;
@@ -66,4 +198,86 @@
     background: #f5f5f5;
     width: 60px;
     height: 20px;
+}
+
+/* -----------------ex 12------------------------ */
+
+.ex-12-top-white{
+    animation-name: mario ;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+}
+
+.ex-12-bottom-white{
+    animation-name: luigi ;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+}
+
+@keyframes mario {
+    0%   {left: 20%;}
+    25%  {left: 30%;}
+    50%  {left: 40%;}
+    75%  {left: 50%;}
+    100% {left: 60%;}
+}
+
+@keyframes luigi {
+    0%   {right: 20%;}
+    25%  {right: 30%;}
+    50%  {right: 40%;}
+    75%  {right: 50%;}
+    100% {right: 60%;}
+}
+
+/* --------------------------------------- */
+
+.ex-13-top-white{
+    animation-name: carlo ;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.ex-13-bottom-white{
+    animation-name: magno ;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes carlo {
+    0%   {left: 18%; top: -10px; rotate: 0deg;}
+    10%  {left: 42%; top: -10px; rotate: 0deg;}
+    20%  {left: 66%; top: -10px; rotate: 0deg;}
+    30%  {left: 90%; top: -10px; rotate: 0deg;}
+    40%  {left: 90%; top: 0%; rotate: 90deg;}
+    50%  {left: 90%; top: 25%; rotate: 90deg;} 
+    60%  {left: 90%; top: 50%; rotate: 90deg;}
+    70%  {left: 90%; top: 75%; rotate: 90deg;}
+    80%  {left: 90%; top: 100%; rotate: 180deg;}
+    90%  {left: 85%; top: 100%; rotate: 180deg;}
+    100% {left: 79%; top: 100%; rotate: 180deg;}
+}
+
+@keyframes magno {
+    0%   {right: 30%; bottom: -10px; rotate: 0deg;}
+    10%  {right: 45%; bottom: -10px; rotate: 0deg;}
+    20%  {right: 60%; bottom: -10px; rotate: 0deg;}
+    30%  {right: 89.2%; bottom: -10px; rotate: 0deg;}
+    40%  {right: 89.2%; bottom: 25%; rotate: 90deg;}
+    50%  {right: 89.2%; bottom: 50%; rotate: 90deg;} 
+    60%  {right: 89.2%; bottom: 75%; rotate: 90deg;}
+    70%  {right: 89.2%; bottom: 100%; rotate: 90deg;}
+    80%  {right: 89.2%; bottom: 100%; rotate: 180deg;}
+    90%  {right: 89%; bottom: 100%; rotate: 180deg;}
+    100% {right: 87%; bottom: 100%; rotate: 180deg;}
+}
+
+.margit{
+    padding: 50px;
 }
